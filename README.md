@@ -1,2 +1,1 @@
-# ZakladyPython 
-# Python basics and OOP
+ZakladyPython - Python basics and OOP
