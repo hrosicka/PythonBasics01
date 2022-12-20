@@ -4,7 +4,7 @@ def main():
 
     print('\nTento soubor je o tvarech!')
 
-    strana_ctverec = float(input('\nZadej stranu čtverce: '))
+    strana_ctverec = float(input("Zadej stranu čtverce:"))
     
     # ctverec1
     Ctverec1 = Ctverec(strana_ctverec)
@@ -12,15 +12,15 @@ def main():
     Ctverec1.obsah()
 
 
-    strana_obdelnik_a = float(input('\nZadej stranu obdélníka a: '))
-    strana_obdelnik_b = float(input('\nZadej stranu obdélníka b: '))
+    strana_obdelnik_a = float(input("Zadej stranu obdélníka a:"))
+    strana_obdelnik_b = float(input("Zadej stranu obdélníka b:"))
 
     # obdelnik1
     Obdelnik1 = Obdelnik(strana_obdelnik_a, strana_obdelnik_b)
     Obdelnik1.obvod()
     Obdelnik1.obsah()
 
-    polomer_r = float(input('\nZadej poloměr kruhu: '))
+    polomer_r = float(input("Zadej polomer kruhu:"))
 
     # kruh1
     Kruh1 = Kruh(polomer_r)
@@ -51,11 +51,11 @@ class Obdelnik:
 
     def obvod(self):
         obvod = 2 * (self.strana_a + self.strana_b)
-        print('Obvod obdelníka o straně', self.strana_b, 'je', obvod)
+        print('Obvod obdelníka o stranách', self.strana_a, 'a' ,self.strana_b, 'je', obvod)
 
     def obsah(self):
         obsah = self.strana_a * self.strana_b
-        print('Obsah obdelníka o straně', self.strana_a, 'je', obsah)
+        print('Obsah obdelníka o stranách', self.strana_a, 'a' ,self.strana_b, 'je', obsah)
 
 # třída kruh
 class Kruh:
