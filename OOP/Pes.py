@@ -1,6 +1,4 @@
 def main():
-
-    # ucime se python
     print('Tento soubor je o psech!')
     
     # stenatko Alik
@@ -23,6 +21,8 @@ def main():
 
 
 class MyDog:
+    zvuk = "Haf Haf"
+
     def __init__(self, name, breed, age):
         self.name = name
         self.breed = breed
@@ -33,7 +33,7 @@ class MyDog:
         print("Muj pes se jmenuje", self.name, "a je to", self.breed)
 
     def zastekej(self):
-        print(self.name, 'steka HAF HAF')
+        print(self.name, "dělá", self.zvuk)
     
     def stari(self):
         if (self.age <= 2):
