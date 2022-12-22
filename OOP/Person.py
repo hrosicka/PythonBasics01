@@ -19,8 +19,12 @@ def main():
     Person3 = Person('Barbora')
     Person3.show_person()
 
+    # Person4 - ADMIN
+    Person4 = Admin('Marcus')
+    Person4.show_person()
 
 
+# parent
 class Person:
     
     new_id = 1
@@ -33,6 +37,11 @@ class Person:
     # show name and id of person
     def show_person(self):
         print("Name:", self.name, "\tid:", self.id)
+
+# child
+class Admin(Person):
+    pass
+
 
 if __name__ == '__main__':
     main()
