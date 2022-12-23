@@ -40,7 +40,11 @@ class Person:
 
 # child
 class Admin(Person):
-    pass
+
+    # overrided method
+    def show_person(self):
+        print("Name:", self.name, "\tADMIN")
+
 
 
 if __name__ == '__main__':
