@@ -43,6 +43,8 @@ class Admin(Person):
 
     # overrided method
     def show_person(self):
+        # using super() we cas access the behavior of parent method
+        super().show_person()
         print("Name:", self.name, "\tADMIN")
 
 
