@@ -23,6 +23,10 @@ def main():
     Person4 = Admin('Marcus')
     Person4.show_person()
 
+    # Person4 - SUPER ADMIN
+    Person5 = SuperAdmin('Antony')
+    Person5.show_person()
+
 
 # parent
 class Person:
@@ -46,6 +50,14 @@ class Admin(Person):
         # using super() we cas access the behavior of parent method
         super().show_person()
         print("Name:", self.name, "\tADMIN")
+
+
+#  multiple inheritance
+class SuperAdmin(Admin):
+    
+    def show_person(self):
+        print("\nSUPER ADMIN")
+        return super().show_person()
 
 
 
