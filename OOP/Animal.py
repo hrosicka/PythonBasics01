@@ -3,7 +3,7 @@ import os
 def main():
 
     os.system('cls')
-
+    print()
     print('Animals!')
     
     # dog Azor
@@ -14,6 +14,15 @@ def main():
     dog1.bark()
     dog1.make_nois()
 
+    # dog Alik
+    print()
+    dog2 = CuteDog("Alik", 1)
+    dog2.show_animal()
+    dog2.eat()
+    dog2.bark()
+    dog2.make_nois()
+    dog2.be_cute()
+
     # cat Micka
     print()
     cat1 = Cat("Micka", 4)
@@ -21,6 +30,16 @@ def main():
     cat1.eat()
     cat1.meow()
     cat1.make_nois()
+
+    # cat Micina
+    print()
+    cat2 = AngryCat("Micina", 8)
+    cat2.show_animal()
+    cat2.eat()
+    cat2.meow()
+    cat2.make_nois()
+    cat2.be_angry()
+
 
     # pet Archi
     print()
@@ -58,6 +77,14 @@ class Dog(Pet):
         print("{} says, Bark!!!!".format(self.name))
 
 
+# multiple inheritance
+class CuteDog(Dog):
+
+    def be_cute(self):
+        print("{} is so cute!!!!".format(self.name))
+
+
+
 #children class Cat
 class Cat(Pet):
 
@@ -69,6 +96,11 @@ class Cat(Pet):
         print("{} says, Meow!!!!".format(self.name))
 
 
+# multiple inheritance
+class AngryCat(Cat):
+
+    def be_angry(self):
+        print("{} is so angry!!!!".format(self.name))
 
 if __name__ == '__main__':
     main()
