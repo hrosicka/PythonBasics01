@@ -28,7 +28,7 @@ def main():
     Person5.show_person()
 
 
-# parent
+# parent class
 class Person:
     
     new_id = 1
@@ -42,7 +42,7 @@ class Person:
     def show_person(self):
         print("Name:", self.name, "\tid:", self.id)
 
-# child
+# child class
 class Admin(Person):
 
     # overrided method
