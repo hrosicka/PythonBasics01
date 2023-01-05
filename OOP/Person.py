@@ -28,7 +28,7 @@ def main():
     Person5.show_person()
 
 
-# parent class
+# parent
 class Person:
     
     new_id = 1
@@ -40,16 +40,27 @@ class Person:
  
     # show name and id of person
     def show_person(self):
-        print("Name:", self.name, "\tid:", self.id)
+        print("Name:", self.name, "\t id:", self.id)
 
-# child class
-class Admin(Person):
+
+class User:
+  def __init__(self, username, role="Visitor"):
+    self.username = username
+    self.role = role
+
+
+# child
+class Admin(Person, User):
+
+    def __init__(self, name):
+        super().__init__(name)
+        User.__init__(self, self.id, "ADMIN")
 
     # overrided method
     def show_person(self):
         # using super() we cas access the behavior of parent method
         super().show_person()
-        print("Name:", self.name, "\tADMIN")
+        print("Name:", self.name, "\t", self.role)
 
 
 #  multiple inheritance
