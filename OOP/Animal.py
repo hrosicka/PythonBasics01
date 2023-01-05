@@ -12,7 +12,7 @@ def main():
     dog1.show_animal()
     dog1.eat()
     dog1.bark()
-    dog1.make_nois()
+    dog1.make_noise()
 
     # dog Alik
     print()
@@ -20,7 +20,7 @@ def main():
     dog2.show_animal()
     dog2.eat()
     dog2.bark()
-    dog2.make_nois()
+    dog2.make_noise()
     dog2.be_cute()
 
     # cat Micka
@@ -29,7 +29,7 @@ def main():
     cat1.show_animal()
     cat1.eat()
     cat1.meow()
-    cat1.make_nois()
+    cat1.make_noise()
 
     # cat Micina
     print()
@@ -37,16 +37,25 @@ def main():
     cat2.show_animal()
     cat2.eat()
     cat2.meow()
-    cat2.make_nois()
+    cat2.make_noise()
     cat2.be_angry()
-
 
     # pet Archi
     print()
     pet1 = Pet("Archi", 3)
     pet1.show_animal()
     pet1.eat()
-    pet1.make_nois()
+    pet1.make_noise()
+
+
+    # example of Polymorphism
+    animals = [dog1, dog2, cat1, cat2, pet1]
+    print()
+    print("-------------")
+    print("We make noice")
+    print("-------------")
+    for o in animals:
+     o.make_noise()
 
 
 
@@ -63,7 +72,7 @@ class Pet:
     def show_animal(self):
         print ("Name:", self.name, "age:", self.age)
 
-    def make_nois(self):
+    def make_noise(self):
         print("{} says, VrrrVrrr".format(self.name))
 
 #children class Dog
@@ -73,7 +82,7 @@ class Dog(Pet):
         print("Bark!!!!")
     
     # override method
-    def make_nois(self):
+    def make_noise(self):
         print("{} says, Bark!!!!".format(self.name))
 
 
@@ -92,7 +101,7 @@ class Cat(Pet):
         print("Meow!!!!")
 
     # override method
-    def make_nois(self):
+    def make_noise(self):
         print("{} says, Meow!!!!".format(self.name))
 
 
