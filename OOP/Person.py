@@ -27,6 +27,15 @@ def main():
     Person5 = SuperAdmin('Antony')
     Person5.show_person()
 
+    print()
+    print("-------")
+    print("MEETING")
+    print("-------")
+    meeting_members = [Person("Raul"), Admin("Susan"), SuperAdmin("Theresa")]
+    for m in meeting_members:
+        m.show_person()
+
+
 
 # parent
 class Person:
@@ -67,7 +76,8 @@ class Admin(Person, User):
 class SuperAdmin(Admin):
     
     def show_person(self):
-        print("\nSUPER ADMIN")
+        print("SUPER ADMIN")
+        print("-----------")
         return super().show_person()
 
 
