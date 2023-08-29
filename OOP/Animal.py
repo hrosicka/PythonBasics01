@@ -67,6 +67,11 @@ class Pet:
         self.age = age
 
     def eat(self):
+        """
+        Pet eats and makes yummy yummy
+
+        Print Yummy yummy
+        """
         print ("Yummy yummy!!!")
 
     def show_animal(self):
