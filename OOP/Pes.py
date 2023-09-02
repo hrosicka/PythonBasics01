@@ -26,17 +26,38 @@ class MyDog:
     zvuk = "Haf"
 
     def __init__(self, name, breed, age):
+        """
+        Constructor of MyDog
+
+        Parameters:
+
+        name =  dogs name = what is its name?
+
+        breed = dogs breed
+
+        age = dogs age = how old is it?
+        """
         self.name = name
         self.breed = breed
         self.age = age
 
  
     def show_dog(self):
+        """
+        Print all information about dog.
+        """
         print("\n-----")
         print("Muj pes se jmenuje", self.name, "a je to", self.breed)
         print("-----")
 
     def zastekej(self, count):
+        """
+        Print the sound the animal makes.
+        
+        Parameters:
+
+        count =  how many times?
+        """
         print(self.name, "dělá:")
         i = 0
         while i < count:
@@ -44,6 +65,9 @@ class MyDog:
             i += 1
     
     def stari(self):
+        """
+        Print information about dogs age.
+        """
         if (self.age <= 2):
             print(self.name, "je jeste stene")
         elif (self.age <= 10):
@@ -53,19 +77,26 @@ class MyDog:
 
 # inheritance
 class MyAngryDog(MyDog):
-
+    """
+    Child class that inherits from MyDog
+    """
     def be_angry(self, count):
+        """
+        Print information about angry dog.
+        """
         print("{} is so angry!!!!".format(self.name))
         for i in range(count):
             print("VRRrrr")
 
-
-
-
 # inheritance
 class MyCuteDog(MyDog):
-
+    """
+    Child class that inherits from MyDog
+    """
     def be_cute(self):
+        """
+        Print information about cute dog.
+        """
         print("{} is so cute!!!!".format(self.name))
 
 

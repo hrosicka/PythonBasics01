@@ -43,6 +43,10 @@ class MyDog:
     def make_noice(self, count):
         """
         Print the sound the animal makes.
+
+        Parameters:
+
+        count =  how many times?
         """
         print(self.name, "makes:")
         i = 0
@@ -66,6 +70,9 @@ class MyAngryDog(MyDog):
     Child class that inherits from MyDog
     """
     def be_angry(self, count):
+        """
+        Print information about angry dog.
+        """
         print("{} is so angry!!!!".format(self.name))
         for i in range(count):
             print("VRRrrr")
@@ -75,6 +82,9 @@ class MyCuteDog(MyDog):
     Child class that inherits from MyDog
     """
     def be_cute(self):
+        """
+        Print information about cute dog.
+        """
         print("{} is so cute!!!!".format(self.name))
 
 
