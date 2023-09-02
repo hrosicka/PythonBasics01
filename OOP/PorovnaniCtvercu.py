@@ -26,19 +26,44 @@ def main():
 
 # třída čtverec
 class Ctverec:
+    """ 
+    Třída pro vytvoření a získání vlastností čtverce
+
+    Metody počítají obvod, obsah a porovnávají 2 čtverce
+
+    Výsledkem je výpis do konzole
+    """
     
     def __init__(self, strana_a):
+        """
+        Konstruktor čtverce - parametrem je strana a v centimetrech
+        """
         self.strana_a = strana_a
 
     def obvod(self):
+        """
+        Metoda pro výpočet obvodu čtverce v centimetrech
+
+        Obvod čtverce: o = 4*a
+        """
         obvod = 4 * self.strana_a
         print('Obvod čtverce o straně', self.strana_a, 'je', obvod)
 
     def obsah(self):
+        """
+        Metoda pro výpočet obsahu čtverce v centimetrech
+
+        Obsah čtverce: S = a^2
+        """
         obsah = math.pow(self.strana_a, 2)
         print('Obsah čtverce o straně', self.strana_a, 'je', obsah)
     
     def porovnej(self, ctverec2):
+        """
+        Metoda pro porovnání 2 čtverců
+
+        Parametrem je druhý čtverec
+        """
 
         if (self.strana_a > ctverec2.strana_a):
             print('\nČtverec o straně', self.strana_a, 'je větší než čtverec o straně', ctverec2.strana_a)
